@@ -22,7 +22,7 @@ function scheduleGeocode() {
 
 function stripUnit(address) {
   // Remove suite/unit/apt suffixes — Nominatim geocodes the building, not the unit
-  return address.replace(/[,\s]+(ste|suite|apt|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
+  return address.replace(/[,\s]+(ste|ste\.|suite|apt|apt\.|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
 }
 
 async function geocode() {

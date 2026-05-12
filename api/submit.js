@@ -53,7 +53,7 @@ module.exports = async function handler(req, res) {
     if (!finalLat || !finalLng) {
       try {
         const ua = { 'User-Agent': `RepublicanBusinessMap/1.0 (+https://github.com/${owner}/${repo})` };
-        const stripped = address.replace(/[,\s]+(ste|suite|apt|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
+        const stripped = address.replace(/[,\s]+(ste|ste\.|suite|apt|apt\.|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
         const q = [stripped, city, state, zip, 'USA'].filter(Boolean).join(', ');
         const r = await fetch(
           `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1`,
