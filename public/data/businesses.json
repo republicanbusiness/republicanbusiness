@@ -110,5 +110,33 @@
     "description": "Elliott Investment Management L.P. is one of the oldest investment managers of its kind under continuous management. As of December 31, 2025, Elliott manages approximately $79.8 billion in assets.",
     "lat": 26.711095,
     "lng": -80.056733
+  },
+  {
+    "id": "1778604467321",
+    "name": "Securing American Greatness",
+    "address": "138 CONANT ST Suite 401",
+    "city": "BEVERLY",
+    "state": "MA",
+    "zip": "01915",
+    "category": "Other",
+    "phone": "(617) 231-4328",
+    "website": "",
+    "description": "CHARLES GANTT\n138 CONANT ST 401\nBEVERLY,MA01915",
+    "lat": 42.5733156,
+    "lng": -70.9062471
+  },
+  {
+    "id": "1778604608681",
+    "name": "Senate Leadership Fund",
+    "address": "6218 GEORGIA AVENUE NW SUITE 1-595",
+    "city": "WASHINGTON",
+    "state": "DC",
+    "zip": "20011",
+    "category": "Other",
+    "phone": "",
+    "website": "https://senateleadershipfund.org/",
+    "description": "Senate Leadership Fund is the only outside organization solely dedicated to protecting and expanding the Republican Senate Majority.\n\nThis cycle, SLF is investing earlier than ever before. Our mission is to support strong Republican candidates in competitive states, leveraging best-in-class campaign tactics and standards to aggressively counter the Democratic machine.",
+    "lat": 38.9655565,
+    "lng": -77.027898
   }
 ]
