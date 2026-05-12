@@ -1,75 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "Patriot Hardware & Supply",
-    "address": "142 Liberty Ave",
-    "city": "Nashville",
-    "state": "TN",
-    "zip": "37201",
-    "category": "Retail",
-    "phone": "615-555-0142",
-    "website": "",
-    "description": "Family-owned hardware store serving Nashville since 1987.",
-    "lat": 36.1627,
-    "lng": -86.7816
-  },
-  {
-    "id": "2",
-    "name": "Freedom Auto Group",
-    "address": "8800 Veterans Pkwy",
-    "city": "Columbus",
-    "state": "GA",
-    "zip": "31909",
-    "category": "Auto",
-    "phone": "706-555-8800",
-    "website": "",
-    "description": "Veteran-owned car dealership specializing in American-made vehicles.",
-    "lat": 32.4609,
-    "lng": -84.9877
-  },
-  {
-    "id": "3",
-    "name": "The Red Barn Diner",
-    "address": "45 Main St",
-    "city": "Bozeman",
-    "state": "MT",
-    "zip": "59715",
-    "category": "Restaurant",
-    "phone": "",
-    "website": "",
-    "description": "Classic American diner. Great steaks and home cooking.",
-    "lat": 45.677,
-    "lng": -111.0429
-  },
-  {
-    "id": "4",
-    "name": "Liberty Insurance Group",
-    "address": "200 Commerce St",
-    "city": "Dallas",
-    "state": "TX",
-    "zip": "75201",
-    "category": "Financial",
-    "phone": "214-555-0200",
-    "website": "",
-    "description": "Independent insurance agency. Home, auto, and business coverage.",
-    "lat": 32.7767,
-    "lng": -96.797
-  },
-  {
-    "id": "5",
-    "name": "Eagle Construction Co.",
-    "address": "550 Industrial Blvd",
-    "city": "Phoenix",
-    "state": "AZ",
-    "zip": "85001",
-    "category": "Construction",
-    "phone": "602-555-0550",
-    "website": "",
-    "description": "Commercial and residential construction. 25 years in the Valley.",
-    "lat": 33.4484,
-    "lng": -112.074
-  },
-  {
     "id": "1778598504432",
     "name": "ULINE",
     "address": "12575 Uline Drive",
@@ -94,7 +24,7 @@
     "phone": "(702) 735-7900",
     "website": "",
     "description": "Medication Assisted Treatment Clinic that treats patient with a substance use disorder with Methadone and Buprenorphine.",
-    "lat": 36.1442399,
-    "lng": -115.1371255
+    "lat": 36.122966902239256,
+    "lng": -115.13816405537541
   }
 ]
