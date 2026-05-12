@@ -114,6 +114,10 @@ document.getElementById('submit-form').addEventListener('submit', async e => {
 });
 
 document.getElementById('submit-another').addEventListener('click', () => {
+  const btn = document.getElementById('submit-btn');
+  btn.disabled = false;
+  btn.textContent = 'Submit for Review';
+  document.getElementById('form-error').textContent = '';
   document.getElementById('submit-form').reset();
   document.getElementById('submit-form').style.display = '';
   document.getElementById('success-msg').style.display = 'none';
