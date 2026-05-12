@@ -68,5 +68,33 @@
     "description": "Citadel LLC (formerly known as Citadel Investment Group, LLC) is an American multinational hedge fund and financial services company. Founded in 1990 by Kenneth Griffin, it has more than $67 billion in assets under management as of January 2026. The company has over 3,100 employees, with corporate headquarters in Miami, Florida,  and offices throughout North America, Asia, and Europe. Founder, CEO and Co-CIO Griffin owns approximately 85% of the firm. As of December 2025, Citadel has posted $90.4 billion in net gains since its inception in 1990, making one of the \"most successful hedge funds in history,\" according to LCH Investments, and CNBC.",
     "lat": 25.7660038,
     "lng": -80.1924327
+  },
+  {
+    "id": "1778603793473",
+    "name": "Elliott Investment Management",
+    "address": "360 S. Rosemary Ave",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "zip": "33401",
+    "category": "Financial",
+    "phone": "(212) 974-6000",
+    "website": "https://www.elliottmgmt.com/",
+    "description": "Elliott Investment Management L.P. (together with its affiliates, “Elliott”) is one of the oldest investment managers of its kind under continuous management. \n\nAs of December 31, 2025, Elliott manages approximately $79.8 billion in assets. The firm employs a staff of 657 people*, including nearly half dedicated to portfolio management and analysis, trading and research, in its Florida headquarters and affiliated offices elsewhere.",
+    "lat": 26.7110946,
+    "lng": -80.056733
+  },
+  {
+    "id": "1778603546487",
+    "name": "Empower Parents PAC",
+    "address": "610 South Boulevard",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33606",
+    "category": "Other",
+    "phone": "(813)254-3369",
+    "website": "https://empowerparentspac.com/",
+    "description": "Empower Parents PAC supports the national\nadvancement of issues and candidates committed to protecting parental rights in education.",
+    "lat": 27.937921,
+    "lng": -82.4685363
   }
 ]
