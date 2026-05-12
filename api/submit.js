@@ -53,23 +53,16 @@ module.exports = async function handler(req, res) {
     if (!finalLat || !finalLng) {
       try {
         const ua = { 'User-Agent': `RepublicanBusinessMap/1.0 (+https://github.com/${owner}/${repo})` };
-        const stripped = address.replace(/\s+(ste|suite|apt|unit|#|floor|fl|room|rm)\.?\s*[\w-]*/gi, '').trim();
-
-        async function geoFetch(addr) {
-          const q = [addr, city, state, zip, 'USA'].filter(Boolean).join(', ');
-          const r = await fetch(
-            `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1`,
-            { headers: ua }
-          );
-          const d = await r.json();
-          return d.length > 0 ? d[0] : null;
-        }
-
-        // Try full address first, then without suite/unit number
-        const result = await geoFetch(address) || await geoFetch(stripped);
-        if (result) {
-          finalLat = parseFloat(result.lat);
-          finalLng = parseFloat(result.lon);
+        const stripped = address.replace(/[,\s]+(ste|suite|apt|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
+        const q = [stripped, city, state, zip, 'USA'].filter(Boolean).join(', ');
+        const r = await fetch(
+          `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1`,
+          { headers: ua }
+        );
+        const geoData = await r.json();
+        if (geoData.length > 0) {
+          finalLat = parseFloat(geoData[0].lat);
+          finalLng = parseFloat(geoData[0].lon);
         }
       } catch {
         // Geocoding failed — PR will note coordinates need manual entry

@@ -21,15 +21,8 @@ function scheduleGeocode() {
 }
 
 function stripUnit(address) {
-  return address.replace(/\s+(ste|suite|apt|unit|#|floor|fl|room|rm)\.?\s*[\w-]*/gi, '').trim();
-}
-
-async function nominatim(query) {
-  const r = await fetch(
-    `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`
-  );
-  const data = await r.json();
-  return data.length > 0 ? data[0] : null;
+  // Remove suite/unit/apt suffixes — Nominatim geocodes the building, not the unit
+  return address.replace(/[,\s]+(ste|suite|apt|apartment|unit|#|floor|fl|room|rm|bldg|building)\.?\s*[\w-]*/gi, '').trim();
 }
 
 async function geocode() {
@@ -41,16 +34,15 @@ async function geocode() {
 
   setGeoStatus('locating', 'Locating address...');
   try {
-    const fullQ    = [address, city, state, zip, 'USA'].filter(Boolean).join(', ');
-    const strippedQ = [stripUnit(address), city, state, zip, 'USA'].filter(Boolean).join(', ');
-
-    // Try full address first, then without suite/unit if it fails
-    const result = await nominatim(fullQ) || await nominatim(strippedQ);
-
-    if (result) {
-      geocodedLat = parseFloat(result.lat);
-      geocodedLng = parseFloat(result.lon);
-      const label = result.display_name.split(',').slice(0, 3).join(',');
+    const q = [stripUnit(address), city, state, zip, 'USA'].filter(Boolean).join(', ');
+    const r = await fetch(
+      `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(q)}&format=json&limit=1`
+    );
+    const data = await r.json();
+    if (data.length > 0) {
+      geocodedLat = parseFloat(data[0].lat);
+      geocodedLng = parseFloat(data[0].lon);
+      const label = data[0].display_name.split(',').slice(0, 3).join(',');
       setGeoStatus('found', `Location verified: ${label}`);
     } else {
       setGeoStatus('warn', 'Address not found — a reviewer will add the map pin manually.');
