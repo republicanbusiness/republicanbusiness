@@ -40,5 +40,19 @@
     "description": "This is SpaceX's Brownsville, TX headquarters location.",
     "lat": 25.985270747734525,
     "lng": -97.18718387299816
+  },
+  {
+    "id": "1778602885004",
+    "name": "Citadel LLC",
+    "address": "830 Brickell Plaza",
+    "city": "Miami",
+    "state": "FL",
+    "zip": "33131",
+    "category": "Financial",
+    "phone": "",
+    "website": "https://www.citadel.com/",
+    "description": "Citadel LLC (formerly known as Citadel Investment Group, LLC) is an American multinational hedge fund and financial services company. Founded in 1990 by Kenneth Griffin, it has more than $67 billion in assets under management as of January 2026. The company has over 3,100 employees, with corporate headquarters in Miami, Florida,  and offices throughout North America, Asia, and Europe. Founder, CEO and Co-CIO Griffin owns approximately 85% of the firm. As of December 2025, Citadel has posted $90.4 billion in net gains since its inception in 1990, making one of the \"most successful hedge funds in history,\" according to LCH Investments, and CNBC.",
+    "lat": 25.7660038,
+    "lng": -80.1924327
   }
 ]
