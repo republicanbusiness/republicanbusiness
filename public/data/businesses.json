@@ -54,5 +54,19 @@
     "description": "The Susquehanna International Group is an American privately-held trading and technology firm headquartered in Bala Cynwyd, Pennsylvania, United States.",
     "lat": 40.0085608,
     "lng": -75.2133748
+  },
+  {
+    "id": "1778603793473",
+    "name": "Elliott Investment Management",
+    "address": "360 S. Rosemary Ave",
+    "city": "West Palm Beach",
+    "state": "FL",
+    "zip": "33401",
+    "category": "Financial",
+    "phone": "(212) 974-6000",
+    "website": "https://www.elliottmgmt.com/",
+    "description": "Elliott Investment Management L.P. (together with its affiliates, “Elliott”) is one of the oldest investment managers of its kind under continuous management. \n\nAs of December 31, 2025, Elliott manages approximately $79.8 billion in assets. The firm employs a staff of 657 people*, including nearly half dedicated to portfolio management and analysis, trading and research, in its Florida headquarters and affiliated offices elsewhere.",
+    "lat": 26.7110946,
+    "lng": -80.056733
   }
 ]
