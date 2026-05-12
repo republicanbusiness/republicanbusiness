@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Republican Business Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="page-map">
+
+  <header>
+    <a href="/" class="logo">Republican Business Map</a>
+    <nav>
+      <a href="/" class="active">Map</a>
+      <a href="/submit.html" class="nav-submit">+ Submit a Business</a>
+    </nav>
+  </header>
+
+  <div class="toolbar">
+    <input type="search" id="search" placeholder="Search businesses..." autocomplete="off" />
+    <div class="cat-list" id="categories">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="Restaurant">Restaurant</button>
+      <button class="cat-btn" data-cat="Retail">Retail</button>
+      <button class="cat-btn" data-cat="Healthcare">Healthcare</button>
+      <button class="cat-btn" data-cat="Legal">Legal</button>
+      <button class="cat-btn" data-cat="Financial">Financial</button>
+      <button class="cat-btn" data-cat="Construction">Construction</button>
+      <button class="cat-btn" data-cat="Real Estate">Real Estate</button>
+      <button class="cat-btn" data-cat="Auto">Auto</button>
+      <button class="cat-btn" data-cat="Services">Services</button>
+      <button class="cat-btn" data-cat="Technology">Technology</button>
+      <button class="cat-btn" data-cat="Agriculture">Agriculture</button>
+      <button class="cat-btn" data-cat="Other">Other</button>
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <div id="statusbar" class="statusbar">Loading...</div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="/js/map.js"></script>
+
+</body>
+</html>

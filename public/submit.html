@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit a Business — Republican Business Map</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="page-submit">
+
+  <header>
+    <a href="/" class="logo">Republican Business Map</a>
+    <nav>
+      <a href="/">Map</a>
+      <a href="/submit.html" class="active nav-submit">+ Submit a Business</a>
+    </nav>
+  </header>
+
+  <main class="submit-main">
+    <div class="submit-container">
+
+      <div class="submit-header">
+        <h1>Submit a Business</h1>
+        <p>Know a Republican-owned or Republican-friendly business? Submit it for review. All submissions are anonymous and reviewed by a maintainer before appearing on the map.</p>
+      </div>
+
+      <form id="submit-form" novalidate>
+        <!-- Honeypot: hidden from users, filled by bots -->
+        <input type="text" id="hp" name="hp" tabindex="-1" autocomplete="off"
+               style="position:absolute;left:-9999px;opacity:0;height:0;width:0" aria-hidden="true" />
+
+        <div class="form-section">
+          <h2>Business Details</h2>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="name">Business Name <span class="req">*</span></label>
+              <input type="text" id="name" required placeholder="e.g. Smith's Hardware" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="category">Category <span class="req">*</span></label>
+              <select id="category" required>
+                <option value="">Select a category...</option>
+                <option value="Restaurant">Restaurant / Bar</option>
+                <option value="Retail">Retail / Shopping</option>
+                <option value="Healthcare">Healthcare / Medical</option>
+                <option value="Legal">Legal</option>
+                <option value="Financial">Financial / Insurance</option>
+                <option value="Construction">Construction / Trades</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Auto">Auto / Transportation</option>
+                <option value="Services">Services</option>
+                <option value="Technology">Technology</option>
+                <option value="Agriculture">Agriculture / Farming</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Location</h2>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="address">Street Address <span class="req">*</span></label>
+              <input type="text" id="address" required placeholder="e.g. 123 Main St" />
+            </div>
+          </div>
+
+          <div class="form-row three-col">
+            <div class="form-group">
+              <label for="city">City <span class="req">*</span></label>
+              <input type="text" id="city" required placeholder="e.g. Nashville" />
+            </div>
+            <div class="form-group">
+              <label for="state">State <span class="req">*</span></label>
+              <input type="text" id="state" required maxlength="2" placeholder="TN"
+                     style="text-transform:uppercase" />
+            </div>
+            <div class="form-group">
+              <label for="zip">ZIP</label>
+              <input type="text" id="zip" maxlength="10" placeholder="37201" />
+            </div>
+          </div>
+
+          <div id="geo-status" class="geo-status" aria-live="polite"></div>
+        </div>
+
+        <div class="form-section">
+          <h2>Contact &amp; Details <span class="optional-label">optional</span></h2>
+
+          <div class="form-row two-col">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" placeholder="e.g. 615-555-0100" />
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input type="text" id="website" placeholder="e.g. www.example.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="description">Description</label>
+              <textarea id="description" rows="3"
+                        placeholder="Brief description of the business (optional)..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div id="form-error" class="form-error" role="alert"></div>
+
+        <div class="form-footer">
+          <div class="privacy-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Submissions are anonymous. No personal information is collected.
+          </div>
+          <button type="submit" id="submit-btn" class="btn-primary">Submit for Review</button>
+        </div>
+      </form>
+
+      <div id="success-msg" class="success-msg" style="display:none" role="status">
+        <div class="success-icon" aria-hidden="true">&#10003;</div>
+        <h2>Submission Received!</h2>
+        <p>Your submission is now in review. Once a maintainer approves it, the business will appear on the map automatically — no further steps needed.</p>
+        <a id="pr-link" href="#" target="_blank" rel="noopener" class="pr-link">
+          Track your submission on GitHub &rarr;
+        </a>
+        <br />
+        <button id="submit-another" class="btn-secondary">Submit Another Business</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="/js/submit.js"></script>
+
+</body>
+</html>
