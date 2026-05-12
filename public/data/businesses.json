@@ -68,5 +68,19 @@
     "description": "Elliott Investment Management L.P. (together with its affiliates, “Elliott”) is one of the oldest investment managers of its kind under continuous management. \n\nAs of December 31, 2025, Elliott manages approximately $79.8 billion in assets. The firm employs a staff of 657 people*, including nearly half dedicated to portfolio management and analysis, trading and research, in its Florida headquarters and affiliated offices elsewhere.",
     "lat": 26.7110946,
     "lng": -80.056733
+  },
+  {
+    "id": "1778603546487",
+    "name": "Empower Parents PAC",
+    "address": "610 South Boulevard",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33606",
+    "category": "Other",
+    "phone": "(813)254-3369",
+    "website": "https://empowerparentspac.com/",
+    "description": "Empower Parents PAC supports the national\nadvancement of issues and candidates committed to protecting parental rights in education.",
+    "lat": 27.937921,
+    "lng": -82.4685363
   }
 ]
