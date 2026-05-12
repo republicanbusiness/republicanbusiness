@@ -26,5 +26,19 @@
     "description": "Medication Assisted Treatment Clinic that treats patient with a substance use disorder with Methadone and Buprenorphine.",
     "lat": 36.122966902239256,
     "lng": -115.13816405537541
+  },
+  {
+    "id": "1778602447258",
+    "name": "SpaceX",
+    "address": "1 Rocket Rd",
+    "city": "Brownsville",
+    "state": "TX",
+    "zip": "78521",
+    "category": "Auto",
+    "phone": "",
+    "website": "https://spacex.com",
+    "description": "This is SpaceX's Brownsville, TX headquarters location.",
+    "lat": null,
+    "lng": null
   }
 ]
