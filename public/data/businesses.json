@@ -54,5 +54,19 @@
     "description": "The Susquehanna International Group is an American privately-held trading and technology firm headquartered in Bala Cynwyd, Pennsylvania, United States.",
     "lat": 40.0085608,
     "lng": -75.2133748
+  },
+  {
+    "id": "1778603546487",
+    "name": "Empower Parents PAC",
+    "address": "610 South Boulevard",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33606",
+    "category": "Other",
+    "phone": "(813)254-3369",
+    "website": "https://empowerparentspac.com/",
+    "description": "Empower Parents PAC supports the national\nadvancement of issues and candidates committed to protecting parental rights in education.",
+    "lat": 27.937921,
+    "lng": -82.4685363
   }
 ]
