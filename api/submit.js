@@ -1,6 +1,7 @@
 // Vercel serverless function — receives anonymous business submissions,
-// geocodes the address, and opens a GitHub PR with the updated businesses.json
-// so the maintainer can review and merge to publish to the live map.
+// geocodes the address, and opens a GitHub PR that adds a single JSON file
+// to the data/ folder. A GitHub Action compiles all files into businesses.json
+// after each merge, so multiple open PRs never conflict.
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -21,7 +22,6 @@ module.exports = async function handler(req, res) {
   const owner = process.env.GITHUB_OWNER;
   const repo  = process.env.GITHUB_REPO;
   const base  = process.env.GITHUB_BRANCH || 'main';
-  const dataPath = 'public/data/businesses.json';
 
   if (!token || !owner || !repo) {
     return res.status(500).json({ error: 'Server configuration error.' });
@@ -65,20 +65,15 @@ module.exports = async function handler(req, res) {
           finalLng = parseFloat(geoData[0].lon);
         }
       } catch {
-        // Geocoding failed — PR will note coordinates need manual entry
+        // Geocoding failed — PR will flag for manual entry
       }
     }
 
-    // Get current main branch SHA
-    const mainRef  = await gh('GET', `/git/ref/heads/${base}`);
-    const mainSha  = mainRef.object.sha;
-
-    // Get current businesses.json (need its SHA to update it)
-    const fileData  = await gh('GET', `/contents/${dataPath}`);
-    const businesses = JSON.parse(Buffer.from(fileData.content, 'base64').toString('utf8'));
+    const id   = Date.now().toString();
+    const slug = name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
 
     const newBiz = {
-      id:          Date.now().toString(),
+      id,
       name:        name.trim(),
       address:     address.trim(),
       city:        city.trim(),
@@ -92,26 +87,25 @@ module.exports = async function handler(req, res) {
       lng:         finalLng,
     };
 
-    businesses.push(newBiz);
-    const updatedContent = Buffer.from(JSON.stringify(businesses, null, 2) + '\n').toString('base64');
+    // Get main branch SHA
+    const mainRef = await gh('GET', `/git/ref/heads/${base}`);
+    const mainSha = mainRef.object.sha;
 
-    // Branch name: submission/TIMESTAMP-slug
-    const slug       = name.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
-    const branchName = `submission/${Date.now()}-${slug}`;
-
+    // Create PR branch
+    const branchName = `submission/${id}-${slug}`;
     await gh('POST', '/git/refs', { ref: `refs/heads/${branchName}`, sha: mainSha });
 
-    // Commit the updated businesses.json directly — merging this PR is all the maintainer needs to do
-    await gh('PUT', `/contents/${dataPath}`, {
+    // Add a single new file — no existing files touched, so no conflicts possible
+    const filename = `data/${id}-${slug}.json`;
+    await gh('PUT', `/contents/${filename}`, {
       message: `Add business: ${newBiz.name} (${newBiz.city}, ${newBiz.state})`,
-      content:  updatedContent,
-      sha:      fileData.sha,
-      branch:   branchName,
+      content: Buffer.from(JSON.stringify(newBiz, null, 2) + '\n').toString('base64'),
+      branch:  branchName,
     });
 
     const coordNote = finalLat
       ? `**Coordinates:** ${finalLat.toFixed(6)}, ${finalLng.toFixed(6)} (auto-geocoded)\n> [View on map](https://www.openstreetmap.org/?mlat=${finalLat}&mlon=${finalLng}&zoom=15)`
-      : `**Coordinates:** Not found — please add \`lat\` and \`lng\` values to \`businesses.json\` before merging, or the pin will not appear on the map.`;
+      : `**Coordinates:** Not found — please edit the file in this PR and add \`lat\` and \`lng\` values before merging.`;
 
     const prBody = [
       '## New Business Submission',

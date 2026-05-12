@@ -1,0 +1,14 @@
+{
+  "id": "1778601374640",
+  "name": "The Adelson Clinic",
+  "address": "3661 S Maryland Pkwy Ste 64",
+  "city": "Las Vegas",
+  "state": "NV",
+  "zip": "89169",
+  "category": "Healthcare",
+  "phone": "(702) 735-7900",
+  "website": "",
+  "description": "Medication Assisted Treatment Clinic that treats patients with a substance use disorder with Methadone and Buprenorphine.",
+  "lat": 36.1442399,
+  "lng": -115.1371255
+}

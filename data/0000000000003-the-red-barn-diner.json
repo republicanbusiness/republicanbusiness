@@ -1,0 +1,14 @@
+{
+  "id": "3",
+  "name": "The Red Barn Diner",
+  "address": "45 Main St",
+  "city": "Bozeman",
+  "state": "MT",
+  "zip": "59715",
+  "category": "Restaurant",
+  "phone": "",
+  "website": "",
+  "description": "Classic American diner. Great steaks and home cooking.",
+  "lat": 45.677,
+  "lng": -111.0429
+}

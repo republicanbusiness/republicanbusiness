@@ -1,0 +1,14 @@
+{
+  "id": "2",
+  "name": "Freedom Auto Group",
+  "address": "8800 Veterans Pkwy",
+  "city": "Columbus",
+  "state": "GA",
+  "zip": "31909",
+  "category": "Auto",
+  "phone": "706-555-8800",
+  "website": "",
+  "description": "Veteran-owned car dealership specializing in American-made vehicles.",
+  "lat": 32.4609,
+  "lng": -84.9877
+}
