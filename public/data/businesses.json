@@ -68,5 +68,19 @@
     "description": "Commercial and residential construction. 25 years in the Valley.",
     "lat": 33.4484,
     "lng": -112.074
+  },
+  {
+    "id": "1778598504432",
+    "name": "ULINE",
+    "address": "12575 Uline Drive",
+    "city": "Pleasant Prarie",
+    "state": "WI",
+    "zip": "53158",
+    "category": "Other",
+    "phone": "(262) 612-4200",
+    "website": "https://www.uline.com",
+    "description": "Uline, a family-owned business, is the leading distributor of shipping, industrial and packaging materials to businesses throughout North America.\n\nFor over 45 years, we've stayed committed to providing the highest levels of service and quality products to our customers.\n\nDepend on Uline to build your business — we won't let you down.",
+    "lat": null,
+    "lng": null
   }
 ]
