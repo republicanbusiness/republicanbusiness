@@ -82,5 +82,19 @@
     "description": "Uline, a family-owned business, is the leading distributor of shipping, industrial and packaging materials to businesses throughout North America.\n\nFor over 45 years, we've stayed committed to providing the highest levels of service and quality products to our customers.\n\nDepend on Uline to build your business — we won't let you down.",
     "lat": 42.5281,
     "lng": -87.8703
+  },
+  {
+    "id": "1778601374640",
+    "name": "The Adelson Clinic",
+    "address": "3661 S Maryland Pkwy Suite 64",
+    "city": "Las Vegas",
+    "state": "NV",
+    "zip": "89169",
+    "category": "Healthcare",
+    "phone": "(702) 735-7900",
+    "website": "",
+    "description": "Medication Assisted Treatment Clinic that treats patient with a substance use disorder with Methadone and Buprenorphine.",
+    "lat": 36.1442399,
+    "lng": -115.1371255
   }
 ]
